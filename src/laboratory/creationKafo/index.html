@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemade Shirt Store</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffbea;
+      color: #334;
+    }
+    .header {
+      background-color: #ffcc00;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ffcc00;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+    .product-info h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin: 10px 0 5px;
+    }
+    .product-info p {
+      margin: 0 0 15px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .product-info button {
+      background-color: #ffcc00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .product-info button:hover {
+      background-color: #e6b800;
+    }
+    .footer {
+      text-align: center;
+      margin: 20px 0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+    <h1>KAFO Creation ®</h1>
+    <p>Unique, Handcrafted Shirts Made with Love</p>
+</div>
+
+<!-- Product Section -->
+<div class="container">
+    <div class="products">
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61OeDrAT3NL._AC_SX679_.jpg" alt="Shirt 1">
+            <div class="product-info">
+                <h2>Classique camisole Blanche</h2>
+                <p>2199.99 cfa</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x300?text=Shirt+2" alt="Shirt 2">
+            <div class="product-info">
+                <h2>Soleil Jaune Top</h2>
+                <p>1599.99 cfa</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x300?text=Shirt+3" alt="Shirt 3">
+            <div class="product-info">
+                <h2>Kafo Logo Shirt</h2>
+                <p>3599.99 cfa</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x300?text=Shirt+4" alt="Shirt 4">
+            <div class="product-info">
+                <h2>Jaune et Blanc Rayures</h2>
+                <p>2199.99 cfa</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Flabola Software Quality Inc. All rights reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/*
+ * Author: Fla-bola Software Quality Services INC.
+ * [ Test case builder ] output : Feature files
+ */
+
+Feature:calculate
+
+Scenario: I want to compute inputs and give results
+
+Given I am pointing to mycalc.com
+
+When I click on equal sign
+
+ And <input one : double>
+ And <operator : string>
+ And <input two : double>
+
+Then COMPUTE INPUTS AND GIVE RESULTS is successful!
+
+-----------------------------------------------------
+Feature:My moving delivery app, Log in
+
+Scenario: I want to log on as a team lead
+
+Given I am pointing to mymovingapp.com
+
+When I click on log in
+
+ And <username : "driver@email.com">
+ And <password : "string">
+
+Then TEAM LEAD LOGS ON is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> username || [ 12 ]
+ --> password || [ 7 ]
+-----------------------------------------------------
+Feature:Moving delivery app, start job
+
+Scenario: I want to record teams start time of a job
+
+Given I am pointing to mymovingapp.com
+
+When I click on start
+
+ And <deviceID : "string">
+ And <team lead name : "string">
+ And <number of team memebers on job : "int">
+ And <name of team members : "string">
+ And <start time : "dateTime">
+ And <start location : "string">
+ And <destination : "string">
+ And <clients persons to contact name : "string">
+ And <clients persons to contact number : "string">
+
+Then RECORD TEAMS START TIME OF A JOB is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> deviceID || [ 7 ]
+ --> team lead name || [ 23 ]
+ --> number of team memebers on job || [ 2 ]
+-----------------------------------------------------
+Feature:play music
+
+Scenario: I want to play selected tune
+
+Given I am pointing to myplaylist.com
+
+When I click on title
+
+ And <locationID : "string">
+ And <getAudio : "wav">
+
+Then PLAY SELECTED TUNE is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> locationID || [ 3 ]
+ --> getAudio || [ 23 ]
+-----------------------------------------------------
+Feature:Stop war in Ukraine
+
+Scenario: I want the World to stop criminals and arrest them
+
+Given I am pointing to stopwar.com
+
+When I mouse over Russia
+
+ And <overthrow gov level settings : "percentage">
+
+Then WORLD STOPS CRIMINALS AND ARREST THEM is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> overthrow gov level settings || [ 3 ]
+-----------------------------------------------------
+
+Feature:direct calls to agent
+
+Scenario: I want to call specified agent
+
+Given I am pointing to dialer.com
+
+When I set status to available
+
+ And <agentID : "int">
+ And <callID : "int">
+ And <policyID : "double">
+
+Then CALL SPECIFIED AGENT is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> agentID || [ 5 ]
+ --> callID || [ 5 ]
+ --> policyID || [ 5 ]
+-----------------------------------------------------
+Feature:test api
+
+Scenario: I want to test the entire api
+
+Given I am pointing to testapi.com
+
+When I click test
+
+ And <property one : "string">
+ And <property two : "int">
+ And <property three : "double">
+
+Then TEST THE ENTIRE API is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> property one || [ 5 ]
+ --> property two || [ 5 ]
+ --> property three || [ 5 ]
+-----------------------------------------------------
+Feature:make xml pretty
+
+Scenario: I want to indent xml
+
+Given I am pointing to morysavane.com
+
+When I click build test case
+
+ And <property one : "string">
+ And <proterty two : "double">
+ And <property three : "int">
+
+Then INDENT XML is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> property one || [ 5 ]
+ --> proterty two || [ 5 ]
+ --> property three || [ 5 ]
+-----------------------------------------------------
+Feature:attribfolio1
+
+Scenario: I want to fetch folio consecutif
+
+Given I am pointing to url.com
+
+When I click reserver
+
+ And <debut : "int">
+ And <end : "int">
+
+Then FETCH FOLIO CONSECUTIF is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> debut || [ 3 ]
+ --> end || [ 3 ]
+-----------------------------------------------------
+Feature:addition button
+
+Scenario: I want to give sum of two nubers
+
+Given I am pointing to calcul.com
+
+When I click on button +
+
+ And <input 1 : "integer">
+ And <input 2 : "integer">
+
+Then GIVE SUM OF TWO NUBERS is successful!
+
+ PROPERTIES  ||  MAX CHAR 
+ --> input 1 || [ 8 ]
+ --> input 2 || [ 7 ]
+-----------------------------------------------------

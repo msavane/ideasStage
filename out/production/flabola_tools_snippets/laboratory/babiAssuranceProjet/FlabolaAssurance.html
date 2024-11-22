@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Portal</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5fff5;
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 650px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .headerStyle {
+      color: green; /* Solid green text */
+      font-size: 23px; /* Adjust the size for an H1 element */
+      font-weight: bold; /* Make it bold */
+      position: absolute; /* Position it to the top-left corner */
+      top: 10px; /* Distance from the top */
+      left: 10px; /* Distance from the left */
+      margin: 0; /* Remove default margins */
+        }
+    h1 {
+      color: #2a7d2a;
+    }
+    select, button, input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #2a7d2a;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #2a7d2a;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a145;
+    }
+    .hidden {
+      display: none;
+    }
+
+
+    </style>
+    <script>
+    function navigateTo(action) {
+      document.getElementById('selection-page').classList.add('hidden');
+      document.getElementById('action-page').classList.remove('hidden');
+      if (action === 'logon') {
+        document.getElementById('logon-form').classList.remove('hidden');
+      } else {
+        document.getElementById('create-account-form').classList.remove('hidden');
+      }
+    }
+    function showDashboard() {
+      document.getElementById('action-page').classList.add('hidden');
+      document.getElementById('dashboard-page').classList.remove('hidden');
+    }
+    function showQuote() {
+      document.getElementById('action-page').classList.add('hidden');
+      document.getElementById('quote-page').classList.remove('hidden');
+    }
+
+
+    </script>
+</head>
+
+<body>
+<div class="headerStyle">
+
+    <h6>Flabola Software Quality Services INC<br/><em>an H M S & D Services SNC company ©</em></h6>
+    <p>
+    <h1>Jardin Ensō</h1>
+    <br/>
+    </p>
+</div>
+<!-- Selection Page -->
+<div class="container" id="selection-page">
+    <h1>Select Your Insurance</h1>
+    <select id="insurance-provider">
+        <option value="Choisisez votre Assurance">Choisisez votre Assurance</option>
+        <option value="Orange Assurance">Orange Assurance</option>
+        <option value="Les Experts Assurances">Les Experts Assurances</option>
+        <option value="Assurance ACME">Assurance ACME</option>
+    </select>
+    <button onclick="navigateTo('logon')">Log On</button>
+    <button onclick="navigateTo('create')">Create Account</button>
+</div>
+
+<!-- Action Page -->
+<div class="container hidden" id="action-page">
+    <div id="logon-form" class="hidden">
+        <h1>Log On</h1>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button onclick="showDashboard()">Continue</button>
+    </div>
+    <div id="create-account-form" class="hidden">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button onclick="showQuote()">Create Account</button>
+    </div>
+</div>
+
+<!-- Dashboard Page -->
+<div class="container hidden" id="dashboard-page">
+    <h1>Assurance Vehicule Tableau de bord</h1>
+    <p>Welcome to your car insurance management dashboard!</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Marque</th>
+            <th>VIN</th>
+            <th>Contact</th>
+            <th>Ville</th>
+            <th>Payments</th>
+            <th>History</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Toyota Rav 4</td>
+            <td>1HGBH41JXMN109186</td>
+            <td>+225 6 12 34 56 78</td>
+            <td>San Pedro</td>
+            <td>
+                <button>Paiement</button>
+            </td>
+            <td><a href="http://google.com/" ...>historique</a></td>
+        </tr>
+        <tr>
+            <td>Audi Q7</td>
+            <td>1HGCM82633A123456</td>
+            <td>+225 6 98 76 54 32</td>
+            <td>Abidjan</td>
+            <td>
+                <button>Paiement</button>
+            </td>
+            <td><a href="http://google.com/" ...>historique</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Quote Page -->
+<div class="container hidden" id="quote-page">
+    <h1>Car Insurance Quote</h1>
+    <p>Your selected provider: <span id="selected-provider"></span></p>
+    <p>Estimated Monthly Premium: $50</p>
+</div>
+</body>
+</html>

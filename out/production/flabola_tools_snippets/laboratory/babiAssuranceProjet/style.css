@@ -1,0 +1,82 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Light green background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #2e7d32; /* Dark green */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styling */
+main {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2e7d32; /* Dark green */
+}
+
+button, select, input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #2e7d32;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #2e7d32; /* Dark green */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1b5e20; /* Darker green */
+    transform: scale(1.02);
+}
+
+form {
+    margin-top: 20px;
+}
+
+#loginForm, #createAccountForm {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+select, input {
+    background-color: #f1f8e9; /* Light green */
+    color: #333;
+}
+
+select:hover, input:focus {
+    outline: none;
+    border: 1px solid #1b5e20; /* Highlight */
+}
